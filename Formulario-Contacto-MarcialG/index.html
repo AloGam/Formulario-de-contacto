@@ -13,7 +13,7 @@
         <form id="contactForm">
             <h2>Contacto</h2>
 
-            <label for="nombre">Nombre</label>
+            <label for="nombre">Nombre(s)</label>
             <input type="text" id="nombre" name="nombre" required>
             <p class="error-message" id="error-nombre"></p>
 
@@ -25,18 +25,16 @@
             <input type="email" id="email" name="email" required>
             <p class="error-message" id="error-email"></p>
 
-
-            <div class="GrupCons">
-                <form class="FormCons">
-                <label for="consulta">Tipo de consulta:</label>
-                <div class="opcionesR">
-                    <input type="radio" id="general" name="consulta" value="general" required>
-                    <label for="general">Cosulta general.</label>
-                    <input type="radio" id="soporte" name="consulta" value="soporte" required>
-                    <label for="soporte">Solicitud de soporte.</label>
-                </div>
-                </form>
-                <p class="error-message" id="errorConsulta"></p>
+            <label for="consulta">Tipo de consulta:</label>
+            <div class="radio-container">
+                <label class="radio-opcion">
+                    <input type="radio" name="consulta" value="general" required>
+                    <p>Cosulta&nbsp;general.</p>
+                </label>
+                <label class="radio-opcion">
+                    <input type="radio" name="consulta" value="soporte" required>
+                    <p>Solicitud&nbsp;de&nbsp;soporte.</p>
+                </label>
             </div>
 
 
@@ -49,7 +47,6 @@
                 <input type="checkbox" id="consentimiento" required>
                 <option value="autorizado">Autorizo ser contactado por el equipo*</option>
             </div>
-            <span class="checkmark"></span>
         </div>
 
             <button type="submit">Enviar</button>

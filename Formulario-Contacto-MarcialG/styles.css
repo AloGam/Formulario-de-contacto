@@ -50,6 +50,7 @@
   }
   
   input, textarea {
+    resize: none;
     width: 100%;
     padding: 0.75rem;
     border: 1px solid var(--gray-medium);
@@ -63,17 +64,24 @@
     box-shadow: 0 0 5px var(--red);
   }
 
-  .opcionesR{
+  .radio-container {
     display: flex;
-    align-items: center;
-    width: 40%;
-  }
+    gap: 10px; /* Espacio entre las opciones */
+}
 
-  .separador{
+.radio-opcion {
     display: flex;
-    align-items: center;
-    width: 25px;
-  }
+    align-items: center; /* Alinea verticalmente el texto y el radio */
+    border: 1px solid var(--gray-medium); /* Borde del rectángulo */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+}
+
+.radio-opcion input {
+  cursor: pointer;
+  margin-right: 10px; /* Espacio entre el radio y el texto */
+}
 
   /* ===== Check consentimiento ===== */
   .GrupCheck {
@@ -81,8 +89,9 @@
     align-items: center;
     height: 50px;
     width: 50px;
+    gap: 10px;
   }
-  
+
   /* ===== Mensajes de error ===== */
   .error-message {
     color: var(--red);
