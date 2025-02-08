@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <form id="contactForm">
+            <h2>Contacto</h2>
+
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <p class="error-message" id="error-nombre"></p>
+
+            <label for="apellido">Apellidos</label>
+            <input type="text" id="apellido" name="apellido" required>
+            <p class="error-message" id="error-apellido"></p>
+
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" name="email" required>
+            <p class="error-message" id="error-email"></p>
+
+
+            <div class="GrupCons">
+                <form class="FormCons">
+                <label for="consulta">Tipo de consulta:</label>
+                <div class="opcionesR">
+                    <input type="radio" id="general" name="consulta" value="general" required>
+                    <label for="general">Cosulta general.</label>
+                    <input type="radio" id="soporte" name="consulta" value="soporte" required>
+                    <label for="soporte">Solicitud de soporte.</label>
+                </div>
+                </form>
+                <p class="error-message" id="errorConsulta"></p>
+            </div>
+
+
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+            <p class="error-message" id="error-mensaje"></p>
+
+        <div>
+            <div class="GrupCheck">
+                <input type="checkbox" id="consentimiento" required>
+                <option value="autorizado">Autorizo ser contactado por el equipo*</option>
+            </div>
+            <span class="checkmark"></span>
+        </div>
+
+            <button type="submit">Enviar</button>
+            <p id="success-message" class="success-message" hidden>¡Mensaje enviado con éxito!</p>
+        </form>
+    </div>
+</body>
+
+</html>
